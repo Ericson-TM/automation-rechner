@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-headline: var(--font-manrope);
+  --color-primary: #2C3E50;
+  --color-primary-light: #3E5C76;
+  --color-accent: #3B82F6;
+  --color-accent-dark: #2563EB;
+  --color-success: #10B981;
+  --color-success-light: #D1FAE5;
+  --animate-fade-in: fade-in 0.6s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
