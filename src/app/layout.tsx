@@ -37,6 +37,36 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans">
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "Automatisierungs-Rechner",
+              url: "https://xn--el-broservice-zob.com",
+              description:
+                "Interaktiver ROI-Rechner: Berechnen Sie, wie viel Zeit und Geld Ihr Unternehmen durch Automatisierung sparen kann.",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "EUR",
+              },
+              author: {
+                "@type": "Organization",
+                name: "EL Büroservice",
+                url: "https://el-bueroservice.com",
+                sameAs: [
+                  "https://el-bueroservice.com",
+                  "https://www.linkedin.com/in/eric-noel-lieberwirth-306b8022a",
+                  "https://github.com/Ericson-TM",
+                ],
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );
